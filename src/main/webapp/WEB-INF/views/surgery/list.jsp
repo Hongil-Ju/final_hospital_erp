@@ -14,7 +14,7 @@
 	</div>
 </div>
 <div class="pd-20 card-box mb-30">
-	<table class="table hover multiple-select-row data-table-export nowrap dataTable no-footer dtr-inline" id="DataTables_Table_2" role="grid">
+	<table class="table hover multiple-select-row data-table-export nowrap datatable no-footer dtr-inline" id="DataTables_Table_2" role="grid">
 		<thead>
 			<tr role="row">
 				<th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="no: activate to sort column ascending">no</th>
@@ -23,9 +23,9 @@
 				<th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="대여자: activate to sort column ascending">예약하기</th>
 		</thead>
 		<tbody>
-			<c:forEach items="${allSurgeries}" var="list">
+			<c:forEach items="${allSurgeries}" var="list" varStatus="status">
 				<tr role="row" class="">
-					<td>${list.surCd}</td>
+					<td>${status.count}</td>
 					<td>${list.surNum}</td>
 					<td>00:00 ~ 24:00</td>
 					<td><span class="badge badge-primary"><a onclick="location.href='scheduleInsert?surCd=${list.surCd}'" id="a2">예약하기</a></span></td>

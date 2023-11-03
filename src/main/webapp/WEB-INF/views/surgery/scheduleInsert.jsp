@@ -20,7 +20,7 @@
         <label class="col-sm-12 col-md-2 col-form-label" style="font-weight: bold; font-size: large; text-align: center;">조회 날짜</label>
         <div>
             <input class="form-control date-picker" id="datepicker" placeholder="Select Reservation Date" type="text" value="${ldt}" readonly style="background-color: white;">
-            <button class="btn btn-outline-primary date-change-btn">날짜 변경 조회</button>
+            <button class="btn btn-outline-primary date-change-btn" style="display: none;">날짜 변경 조회</button>
             <a id="hidden-link" href=""></a>
         </div>
     </div>
@@ -52,14 +52,14 @@
             <th>07:00 ~ 08:00</th>
         </tr>
         <tr>
-            <th id="0" class="t"></th>
-            <th id="1" class="t"></th>
-            <th id="2" class="t"></th>
-            <th id="3" class="t"></th>
-            <th id="4" class="t"></th>
-            <th id="5" class="t"></th>
-            <th id="6" class="t"></th>
-            <th id="7" class="t"></th>
+            <th id="0" class="t time-select"></th>
+            <th id="1" class="t time-select"></th>
+            <th id="2" class="t time-select"></th>
+            <th id="3" class="t time-select"></th>
+            <th id="4" class="t time-select"></th>
+            <th id="5" class="t time-select"></th>
+            <th id="6" class="t time-select"></th>
+            <th id="7" class="t time-select"></th>
         </tr>
     </table>
         <br>
@@ -75,14 +75,14 @@
             <th>15:00 ~ 16:00</th>
         </tr>
         <tr>
-            <th id="8" class="t"></th>
-            <th id="9" class="t"></th>
-            <th id="10" class="t"></th>
-            <th id="11" class="t"></th>
-            <th id="12" class="t"></th>
-            <th id="13" class="t"></th>
-            <th id="14" class="t"></th>
-            <th id="15" class="t"></th>
+            <th id="8" class="t time-select"></th>
+            <th id="9" class="t time-select"></th>
+            <th id="10" class="t time-select"></th>
+            <th id="11" class="t time-select"></th>
+            <th id="12" class="t time-select"></th>
+            <th id="13" class="t time-select"></th>
+            <th id="14" class="t time-select"></th>
+            <th id="15" class="t time-select"></th>
         </tr>
     </table>
         <br>
@@ -98,14 +98,14 @@
             <th>23:00 ~ 24:00</th>
         </tr>
         <tr>
-            <th id="16" class="t"></th>
-            <th id="17" class="t"></th>
-            <th id="18" class="t"></th>
-            <th id="19" class="t"></th>
-            <th id="20" class="t"></th>
-            <th id="21" class="t"></th>
-            <th id="22" class="t"></th>
-            <th id="23" class="t"></th>
+            <th id="16" class="t time-select"></th>
+            <th id="17" class="t time-select"></th>
+            <th id="18" class="t time-select"></th>
+            <th id="19" class="t time-select"></th>
+            <th id="20" class="t time-select"></th>
+            <th id="21" class="t time-select"></th>
+            <th id="22" class="t time-select"></th>
+            <th id="23" class="t time-select"></th>
         </tr>
     </table>
         <br>

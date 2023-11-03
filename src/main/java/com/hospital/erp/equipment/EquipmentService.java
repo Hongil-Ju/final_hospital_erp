@@ -97,5 +97,10 @@ public class EquipmentService {
 		equipmentHistoryVO = equipmentDAO.equipmentHistoryCheck(equipmentHistoryVO);
 		return equipmentHistoryVO;
 	}
+
+	public EquipmentVO codeCheck(CodeVO codeVO) {
+		EquipmentVO ev = equipmentDAO.codeCheck(codeVO);
+		return ev;
+	}
 	 
 }

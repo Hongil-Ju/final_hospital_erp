@@ -111,4 +111,14 @@
 				)
   	</insert>
   	
+  	<!-- surgery surNum 중복 체크 -->
+  	<select id="surgeryCheck" resultType="SurgeryVO" parameterType="SurgeryVO">
+		SELECT
+			*
+		FROM
+			SURGERY
+		WHERE
+			SUR_NUM = #{surNum}
+  	</select>
+  	
 </mapper>

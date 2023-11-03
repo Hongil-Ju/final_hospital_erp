@@ -39,11 +39,14 @@
 				</c:forEach>
 				<button class="btn btn-outline-primary" onclick="location.href='../equipment/list'">전체보기</button>
 			</div>
+			<div class="pull-right">
+				총 ${number}개
+			</div>
 			<!-- <div class="pull-right">
 				'대여가능'만 보기 <input type="checkbox" checked="" data-size="" data-color="#0099ff" data-switchery="true" style="color: rgb(0, 153, 255);">
 			</div> -->
 		</div>
-		<table class="table hover multiple-select-row data-table-export nowrap dataTable no-footer dtr-inline" id="DataTables_Table_2" role="grid">
+		<table class="table hover multiple-select-row data-table-export nowrap datatable no-footer dtr-inline" id="DataTables_Table_2" role="grid">
 			<thead>
 				<tr role="row">
 					<th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="no: activate to sort column ascending">no</th>
@@ -55,9 +58,9 @@
 			<tbody>
 
 				
-				<c:forEach items="${allEquipments}" var="list">
+				<c:forEach items="${allEquipments}" var="list" varStatus="status">
 					<tr role="row" class="">
-						<td value="${list.equCd}">${list.equCd}</td>
+						<td value="${list.equCd}">${status.count}</td>
 						<td>${list.codeName}</td>
 						<td><a id="a1" onclick="location.href='data/${list.equCd}'">${list.equSnum}</a></td>
 						<td>
@@ -133,7 +136,7 @@
 							<div class="form-group row">
 								<label for="example-datetime-local-input" class="col-sm-12 col-md-2 col-form-label">구매날짜</label>
 								<div class="col-sm-12 col-md-10">
-									<input class="form-control datetimepicker" id="datetimepicker" placeholder="Click to select Date and time" type="text" name="equPdate" readonly style="background-color: white;">
+									<input class="form-control date-picker" id="date-picker" placeholder="Click to select Date" type="text" name="equPdate" readonly style="background-color: white;">
 								</div>
 							</div>
 							<div class="clearfix mb-20">

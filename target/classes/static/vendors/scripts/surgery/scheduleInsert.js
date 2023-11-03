@@ -93,7 +93,7 @@ $('#schedule-insert-btn').click(function(){
 					if(result=='x'){
 						alert('예약 시간을 다시 확인해주세요.');
 					}else{
-						window.location.replace(result)
+			    		location.reload();
 						alert('수술실 예약 완료되었습니다. (' + date +': '+surgeryStart+'시 ~ '+surgeryEnd+'시)')
 					}
 				}
@@ -103,4 +103,12 @@ $('#schedule-insert-btn').click(function(){
 			alert('당일 예약은 불가능합니다.');
 		}
 	}
+});
+
+$('.time-select').click(function(){
+	let startTime = Number($(this).attr('id'));
+	let endTime = Number($(this).attr('id'))+1;
+	
+	$('.surgery-start').val(startTime).prop("selected", true);
+	$('.surgery-end').val(endTime).prop("selected", true);
 });

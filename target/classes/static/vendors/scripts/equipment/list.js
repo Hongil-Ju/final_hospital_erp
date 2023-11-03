@@ -64,7 +64,12 @@ $('.category-delete-btn').click(function(){
 				codeCd : codeToDelete
 			},
 		    success : function(result) {
-		    	window.location.replace(result)
+				if(result == 1){
+					alert('삭제 되었습니다')
+		    		location.reload();
+				}else{
+					alert('해당 카테고리에 해당하는 비품이 있기 때문에 삭제할 수 없습니다.')
+				}
 			}
 	 	})
 	}
@@ -112,7 +117,9 @@ $('.equipment-insert-btn').click(function(){
 				date : pDate
 			},
 		    success : function(result) {
-		    	window.location.replace(result)
+		    	// window.location.replace(result)
+			    	console.log(result)
+			    	location.reload();
 			}
 	 		})
 		}else{

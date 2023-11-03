@@ -314,4 +314,17 @@
 				EQU_CD = #{equCd}
 			) T JOIN EQUIPMENT_HISTORY EH 
 			ON T.EH_CD = EH.EH_CD
+  	</select>
+  	
+  	<!-- 특정 카테고리에 해당하는 비품이 존재하는지 체크 -->
+  	<select id="codeCheck" parameterType="CodeVO" resultType="EquipmentVO">	
+		SELECT
+			*
+		FROM
+			EQUIPMENT
+		WHERE
+			CODE_CD = #{codeCd} AND
+			EQU_DELETE = 0
+		GROUP BY 
+			CODE_CD
   	</select></mapper>

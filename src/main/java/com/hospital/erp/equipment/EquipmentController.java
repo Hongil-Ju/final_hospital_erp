@@ -97,6 +97,7 @@ public class EquipmentController {
 		List<CodeVO> categories = equipmentService.categoriesList();
 		
 		model.addAttribute("allEquipments", allEquipments);
+		model.addAttribute("number", allEquipments.size());
 		model.addAttribute("categories", categories);
 		
 		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal(); 
@@ -132,12 +133,16 @@ public class EquipmentController {
 	
 	@ResponseBody
 	@PostMapping("codeDelete") // 논리삭제  
-	public String equipmentCodeCdDelete(CodeVO codeVO)throws Exception{
+	public int equipmentCodeCdDelete(CodeVO codeVO)throws Exception{
 		
-		equipmentService.codeDelete(codeVO);
-		String st = "list";
-		return st;
+		EquipmentVO ev = equipmentService.codeCheck(codeVO);
 		
+		if(ev == null) {
+			equipmentService.codeDelete(codeVO);
+			return 1;
+		}else {
+			return 0;
+		}
 	}
 	
 	@ResponseBody

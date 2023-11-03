@@ -45,5 +45,7 @@ public interface EquipmentDAO {
 	 public EquipmentHistoryVO equipmentHistoryData(EquipmentHistoryVO equipmentHistoryVO);
 
 	 public EquipmentHistoryVO equipmentHistoryCheck(EquipmentHistoryVO equipmentHistoryVO);
+
+	 public EquipmentVO codeCheck(CodeVO codeVO);
 	 
 }

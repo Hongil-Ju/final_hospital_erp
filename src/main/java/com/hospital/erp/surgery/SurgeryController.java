@@ -46,13 +46,16 @@ public class SurgeryController {
 	
 	@ResponseBody
 	@PostMapping("update")
-	public String surgeryUpdate(SurgeryVO surgeryVO)throws Exception{
+	public int surgeryUpdate(SurgeryVO surgeryVO)throws Exception{
 		
-		surgeryService.surgeryUpdate(surgeryVO);
+		SurgeryVO check = surgeryService.surgeryCheck(surgeryVO);
 		
-		String st = "list";
-		return st;
-		
+		if(check == null) {
+			surgeryService.surgeryUpdate(surgeryVO);
+			return 1;
+		}else {
+			return 0;
+		}
 	}
 	
 	@ResponseBody
@@ -68,13 +71,16 @@ public class SurgeryController {
 	
 	@ResponseBody
 	@PostMapping("insert")
-	public String surgeryInsert(SurgeryVO surgeryVO)throws Exception{
+	public int surgeryInsert(SurgeryVO surgeryVO)throws Exception{
 		
-		surgeryService.surgeryInsert(surgeryVO);
+		SurgeryVO check = surgeryService.surgeryCheck(surgeryVO);
 		
-		String st = "list";
-		return st;
-		
+		if(check == null) {
+			surgeryService.surgeryInsert(surgeryVO);
+			return 1;
+		}else {
+			return 0;
+		}	
 	}
 	
 	@GetMapping("scheduleInsert") 

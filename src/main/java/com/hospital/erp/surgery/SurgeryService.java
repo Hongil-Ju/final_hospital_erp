@@ -44,6 +44,11 @@ public class SurgeryService {
 		surgeryDAO.surgeryScheduleInsert(scheduleVO);
 	}
 
+	public SurgeryVO surgeryCheck(SurgeryVO surgeryVO) throws Exception {
+		surgeryVO = surgeryDAO.surgeryCheck(surgeryVO);
+		return surgeryVO;
+	}
+
 //	public List<SurgeryParticiantVO> memberList() throws Exception {
 //		List<SurgeryParticiantVO> result = surgeryDAO.memberList();
 //		return result;
