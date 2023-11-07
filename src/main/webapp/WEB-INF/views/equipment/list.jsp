@@ -46,7 +46,7 @@
 				'대여가능'만 보기 <input type="checkbox" checked="" data-size="" data-color="#0099ff" data-switchery="true" style="color: rgb(0, 153, 255);">
 			</div> -->
 		</div>
-		<table class="table hover multiple-select-row data-table-export nowrap datatable no-footer dtr-inline" id="DataTables_Table_2" role="grid">
+		<table class="table hover multiple-select-row data-table-export nowrap datatable2 no-footer dtr-inline" id="DataTables_Table_2" role="grid">
 			<thead>
 				<tr role="row">
 					<th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="no: activate to sort column ascending">no</th>
@@ -165,10 +165,10 @@
 					</div>
 					<div class="modal-body">
 						<table class="table table-bordered">
-							<c:forEach items="${categories}" var="category">
+							<c:forEach items="${categories}" var="category" varStatus="status">
 								<tr role="row" class="">
 									<td value="${category.codeCd}">
-										${category.codeCd}
+										${status.count}
 									</td>
 									<td class="td-1">
 										<input class="form-control category" type="text" name="" value="${category.codeName}">

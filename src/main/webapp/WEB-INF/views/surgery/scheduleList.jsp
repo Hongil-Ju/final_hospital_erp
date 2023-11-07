@@ -22,12 +22,12 @@
     <tbody>
         <c:forEach items="${scheduleList}" var="list">
             <tr>
-                <th scope="row">${list.surNum}</th>
-                <td>${list.dateString}</td>
+                <th scope="row" value="${list.surNum}">${list.surNum}</th>
+                <td class="param-date">${list.dateString}</td>
                 <td>${list.startNumString}</td>
                 <td>${list.endNumString}</td>
                 <td value="${list.schCd}">
-                    <span class="badge badge-primary"><a onclick="location.href='scheduleUpdate'" id="a2">수정하기</a></span>
+                    <span class="badge badge-primary"><a class="surgery-schedule-update-btn" id="a2">수정하기</a></span>
                     <span class="badge badge-primary"><a class="surgery-schedule-delete-btn" id="a2">취소하기</a></span>
                 </td>
             </tr>

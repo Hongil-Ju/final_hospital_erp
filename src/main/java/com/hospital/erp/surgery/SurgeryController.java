@@ -214,10 +214,11 @@ public class SurgeryController {
 		
 	}
 	
-	@GetMapping("scheduleUpdate") 
-	public String surgeryscheduleUpdate() throws Exception{ 
-		   
-		return "surgery/scheduleUpdate"; 
+	@ResponseBody
+	@PostMapping("scheduleUpdate") 
+	public String surgeryScheduleUpdate(ScheduleVO scheduleVO) throws Exception{ 
+		System.out.println(scheduleVO.getSchCd());
 		
+		return "surgery/scheduleUpdate"; 
 	}
 }

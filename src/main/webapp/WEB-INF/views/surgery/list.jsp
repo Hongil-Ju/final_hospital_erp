@@ -14,7 +14,7 @@
 	</div>
 </div>
 <div class="pd-20 card-box mb-30">
-	<table class="table hover multiple-select-row data-table-export nowrap datatable no-footer dtr-inline" id="DataTables_Table_2" role="grid">
+	<table class="table hover multiple-select-row data-table-export nowrap datatable2 no-footer dtr-inline" id="DataTables_Table_2" role="grid">
 		<thead>
 			<tr role="row">
 				<th class="sorting" tabindex="0" aria-controls="DataTables_Table_2" rowspan="1" colspan="1" aria-label="no: activate to sort column ascending">no</th>
